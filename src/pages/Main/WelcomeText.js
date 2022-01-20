@@ -15,7 +15,7 @@ const WelcomeText = () => {
       color='#121214'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize='60px'
+      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
       finished={startNext}
     />,
     <TypeWriter
@@ -26,7 +26,7 @@ const WelcomeText = () => {
       color='#121214'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize='60px'
+      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
       finished={startNext}
     />,
     <TypeWriter
@@ -37,7 +37,7 @@ const WelcomeText = () => {
       color='#121214'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize='60px'
+      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
     />,
   ]
 
@@ -55,13 +55,11 @@ const WelcomeText = () => {
 }
 
 const Container = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 1000px;
-  height: 400px;
 `
 
 export default WelcomeText

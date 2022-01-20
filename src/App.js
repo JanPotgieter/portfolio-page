@@ -37,12 +37,15 @@ const Layout = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 100px auto;
-  grid-template-rows: 100px 1fr 80px;
-  grid-template-areas:
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 'main';
+  /* grid-template-columns: 100px auto; */
+  /* grid-template-rows: 100px 1fr 80px; */
+  /* grid-template-areas:
     'header header'
     'sideBar main'
-    'footer footer';
+    'footer footer'; */
   background: #f2ede4;
 `
 

@@ -15,6 +15,10 @@ class Main extends Component {
 const Container = styled.div`
   grid-area: main;
   padding: 200px;
+
+  @media (max-width: 1000px) {
+    padding: 200px 40px 0px 40px;
+  }
 `
 
 export default Main

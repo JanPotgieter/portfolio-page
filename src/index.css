@@ -6,3 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+  font-family: typewriter;
+  src: url(./fonts/Special_Elite/SpecialElite-Regular.ttf);
+}

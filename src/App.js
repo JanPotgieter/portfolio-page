@@ -1,30 +1,49 @@
-import styled from "styled-components"
+/*
+
+home
+
+about
+contact
+resume
+projects
+tech
+
+linkedin
+github
+gmail
+
+*/
+
+import styled from 'styled-components'
+import Header from './components/Header'
+import SideBar from './components/SideBar'
+import Main from './pages/Main'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <Main>
-      <h2>Coming soon</h2>
-    </Main>
-  );
+    <Layout>
+      {/* <Header />
+      <SideBar /> */}
+      <Main />
+      {/* <Footer /> */}
+    </Layout>
+  )
 }
 
-const Main = styled.div`
-  position: fixed;
+const Layout = styled.div`
+  position: absolute;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: black;
-  border: 2px solid white;
-
-  h2 {
-    color: white;
-    font-size: 40px;
-  }
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 100px 1fr 80px;
+  grid-template-areas:
+    'header header'
+    'sideBar main'
+    'footer footer';
+  background: #f2ede4;
 `
 
-export default App;
+export default App

@@ -6,32 +6,20 @@ import email from '../icons/email.png'
 const SideBar = () => {
   return (
     <Container>
-      <Button id='email' onClick={buttonClicked} title='Email'>
-        <Icon id='email' src={email} />
-      </Button>
-      <Button id='github' onClick={buttonClicked} title='GitHub'>
-        <Icon id='github' src={github} />
-      </Button>
-      <Button id='linkedin' onClick={buttonClicked} title='LinkedIn'>
-        <Icon id='linkedin' src={linkedin} />
-      </Button>
+      <Link title='Email' target='blank' href='mailto:jattas@gmail.com'>
+        <Icon src={email} />
+      </Link>
+      <Link title='GitHub' target='blank' href='https://github.com/JanPotgieter'>
+        <Icon src={github} />
+      </Link>
+      <Link title='LinkedIn' target='blank' href='https://www.linkedin.com/in/janpotgieter/'>
+        <Icon src={linkedin} />
+      </Link>
     </Container>
   )
 }
 
-const links = {
-  linkedin: 'https://www.linkedin.com/in/janpotgieter/',
-  github: 'https://github.com/JanPotgieter',
-  email: 'mailto:jattas@gmail.com'
-}
-
-function buttonClicked(event) {
-  const id = event.target.id
-  const link = <a href={links[id]} target='blank' />
-  link.click()
-}
-
-const Container = styled.nav`
+const Container = styled.div`
   grid-area: sideBar;
   height: 100%;
   display: flex;
@@ -42,7 +30,7 @@ const Container = styled.nav`
   margin-left: 40px;
 `
 
-const Button = styled.button`
+const Link = styled.a`
   position: relative;
   background-color: inherit;
   border: none;

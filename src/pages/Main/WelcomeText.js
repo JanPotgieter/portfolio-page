@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
 import styled from 'styled-components'
 import TypeWriter from '../../components/TypeWriter'
 
@@ -12,10 +11,10 @@ const WelcomeText = () => {
       text='Hello world!'
       delay={1800}
       width='100%'
-      color='#121214'
+      color='#313131'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
+      fontSize={window.innerWidth < 1000 ? '20px': '50px'}
       finished={startNext}
     />,
     <TypeWriter
@@ -23,10 +22,10 @@ const WelcomeText = () => {
       text='My name is Jan Potgieter.'
       delay={500}
       width='100%'
-      color='#121214'
+      color='#313131'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
+      fontSize={window.innerWidth < 1000 ? '20px': '50px'}
       finished={startNext}
     />,
     <TypeWriter
@@ -34,10 +33,10 @@ const WelcomeText = () => {
       text='I am a Front End Developer.'
       delay={500}
       width='100%'
-      color='#121214'
+      color='#313131'
       textShadow='1px 1px 1px #2c2b33'
       fontFamily='typewriter'
-      fontSize={window.innerWidth < 1000 ? '20px': '60px'}
+      fontSize={window.innerWidth < 1000 ? '20px': '50px'}
     />,
   ]
 
@@ -60,6 +59,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  row-gap: 10px;
 `
 
 export default WelcomeText

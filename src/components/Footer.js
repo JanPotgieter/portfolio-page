@@ -8,7 +8,6 @@ const Footer = () => {
 
 const Container = styled.div`
   grid-area: footer;
-  background-color: yellow;
 `
 
 export default Footer
